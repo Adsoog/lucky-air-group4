@@ -1,0 +1,16 @@
+body {
+  font-family: Arial;
+  background: #f0f0f0;
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  background: white;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
