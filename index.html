@@ -1,52 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Lucky Air - Caso E-commerce</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Lucky Air - Reserva de Vuelos</title>
 </head>
 <body>
 
-  <header>
-    <h1>✈️ Lucky Air - Caso E-commerce</h1>
-  </header>
+    <header id="main-header">
+        <h1>Lucky Air</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reserva.html">Reserva de Vuelos</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="atencion.html">Atención al Cliente</a></li>
+                <li><a href="trabajo.html">Portal de Trabajo</a></li>
+                <li><a href="quejas.html">Quejas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
+    <main id="booking-content">
+        <section id="search-engine">
+            <h2>Busca tu próximo destino</h2>
+            <form>
+                <fieldset>
+                    <legend>Detalles del viaje</legend>
 
-    <section>
-      <h2>📌 Resumen</h2>
-      <p>
-        Lucky Air es una aerolínea de bajo costo en China que creció rápidamente
-        gracias al turismo, pero necesita mejorar su estrategia digital.
-      </p>
-    </section>
+                    <label>Origen:</label>
+                    <select>
+                        <option>Kunming (KMG)</option>
+                        <option>Dali (DLU)</option>
+                        <option>Xishuangbanna (JHG)</option>
+                    </select>
 
-    <section>
-      <h2>⚠️ Problema</h2>
-      <p>
-        No puede competir solo por precio y necesita mejorar su plataforma online.
-      </p>
-    </section>
+                    <label>Destino:</label>
+                    <select>
+                        <option>Beijing (PEK)</option>
+                        <option>Shanghai (SHA)</option>
+                        <option>Guangzhou (CAN)</option>
+                    </select>
 
-    <section>
-      <h2>💡 Soluciones</h2>
-      <ul>
-        <li>Mejorar la experiencia web</li>
-        <li>Agregar CRM</li>
-        <li>Crear comunidad (Web 2.0)</li>
-        <li>Pagos online más fáciles</li>
-      </ul>
-    </section>
+                    <br><br>
 
-    <section>
-      <h2>🧠 Conclusión</h2>
-      <p>
-        Lucky Air debe invertir en tecnología para mejorar la experiencia del cliente
-        y aumentar ventas online.
-      </p>
-    </section>
+                    <label>Fecha de salida:</label>
+                    <input type="date">
 
-  </main>
+                    <label>Pasajeros:</label>
+                    <input type="number" min="1" max="9" value="1">
+
+                    <br><br>
+                    <button type="submit">Buscar Vuelos Disponibles</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="flight-info">
+            <h3>Información Importante</h3>
+            <p>
+                Recuerda que al ser una aerolínea de bajo costo, nuestra tarifa base
+                solo incluye un artículo personal. Puedes agregar equipaje en el siguiente paso.
+            </p>
+        </section>
+    </main>
+
+    <aside id="promo-sidebar">
+        <h3>Ofertas del Día</h3>
+        <article>
+            <h4>Yunnan Express</h4>
+            <p>Vuelos desde 199 CNY a Dali solo por hoy.</p>
+        </article>
+        <hr>
+        <article>
+            <h4>Seguro de Viaje</h4>
+            <p>Protege tu equipaje por solo 50 CNY adicionales.</p>
+        </article>
+    </aside>
+
+    <footer id="main-footer">
+        <hr>
+        <address>
+            Aeropuerto Internacional de Kunming Wujiaba, Yunnan, China.
+        </address>
+        <p>&copy; 2026 Lucky Air Co., Ltd. - Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
