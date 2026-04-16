@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lucky Air - Reserva de Vuelos</title>
+    <title>Lucky Air - Inicio</title>
 </head>
 <body>
 
@@ -11,78 +11,68 @@
         <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="reserva.html">Reserva de Vuelos</a></li>
-                <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="atencion.html">Atención al Cliente</a></li>
-                <li><a href="trabajo.html">Portal de Trabajo</a></li>
-                <li><a href="quejas.html">Quejas</a></li>
+                <li><a href="pages/reserva.html">Reserva de Vuelos</a></li>
+                <li><a href="pages/paquetes.html">Paquetes</a></li>
+                <li><a href="pages/atencion.html">Atención al Cliente</a></li>
+                <li><a href="pages/trabajo.html">Portal de Trabajo</a></li>
+                <li><a href="pages/quejas.html">Quejas</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="booking-content">
-        <section id="search-engine">
-            <h2>Busca tu próximo destino</h2>
-            <form>
-                <fieldset>
-                    <legend>Detalles del viaje</legend>
-
-                    <label>Origen:</label>
-                    <select>
-                        <option>Kunming (KMG)</option>
-                        <option>Dali (DLU)</option>
-                        <option>Xishuangbanna (JHG)</option>
-                    </select>
-
-                    <label>Destino:</label>
-                    <select>
-                        <option>Beijing (PEK)</option>
-                        <option>Shanghai (SHA)</option>
-                        <option>Guangzhou (CAN)</option>
-                    </select>
-
-                    <br><br>
-
-                    <label>Fecha de salida:</label>
-                    <input type="date">
-
-                    <label>Pasajeros:</label>
-                    <input type="number" min="1" max="9" value="1">
-
-                    <br><br>
-                    <button type="submit">Buscar Vuelos Disponibles</button>
-                </fieldset>
-            </form>
+    <main id="home-content">
+        <section id="hero-banner">
+            <h2>Vuela Alto, Paga Poco</h2>
+            <p>
+                Descubre la magia de la provincia de Yunnan con la aerolínea líder en bajo costo.
+                Conectamos sueños con destinos inolvidables.
+            </p>
+            <a href="pages/reserva.html">
+                <button type="button">¡Reserva tu vuelo ahora!</button>
+            </a>
         </section>
 
-        <section id="flight-info">
-            <h3>Información Importante</h3>
-            <p>
-                Recuerda que al ser una aerolínea de bajo costo, nuestra tarifa base
-                solo incluye un artículo personal. Puedes agregar equipaje en el siguiente paso.
-            </p>
+        <section id="features">
+            <h3>¿Por qué elegir Lucky Air?</h3>
+            <article>
+                <h4>Eficiencia Total</h4>
+                <p>Nuestra flota de Boeing 737-700 garantiza puntualidad y seguridad en cada trayecto.</p>
+            </article>
+            <article>
+                <h4>Precios Imbatibles</h4>
+                <p>Al eliminar lujos innecesarios, te trasladamos el ahorro directamente a tu bolsillo.</p>
+            </article>
+        </section>
+
+        <section id="destinations">
+            <h3>Nuestros Destinos Populares</h3>
+            <ul>
+                <li><strong>Dali:</strong> Paisajes históricos y cultura ancestral.</li>
+                <li><strong>Xishuangbanna:</strong> Naturaleza tropical y aventura.</li>
+                <li><strong>Kunming:</strong> La ciudad de la eterna primavera.</li>
+            </ul>
         </section>
     </main>
 
-    <aside id="promo-sidebar">
-        <h3>Ofertas del Día</h3>
+    <aside id="news-sidebar">
+        <h3>Noticias y Avisos</h3>
         <article>
-            <h4>Yunnan Express</h4>
-            <p>Vuelos desde 199 CNY a Dali solo por hoy.</p>
+            <h4>Nuevas Rutas 2026</h4>
+            <p>Próximamente estaremos volando directamente a Shanghai desde Dali.</p>
         </article>
         <hr>
         <article>
-            <h4>Seguro de Viaje</h4>
-            <p>Protege tu equipaje por solo 50 CNY adicionales.</p>
+            <h4>Protocolos de Seguridad</h4>
+            <p>Revisa las últimas actualizaciones sobre el manejo de equipaje en aeropuertos secundarios.</p>
         </article>
     </aside>
 
     <footer id="main-footer">
         <hr>
         <address>
-            Aeropuerto Internacional de Kunming Wujiaba, Yunnan, China.
+            Sede Principal: Kunming, Provincia de Yunnan, China.
         </address>
-        <p>&copy; 2026 Lucky Air Co., Ltd. - Todos los derechos reservados.</p>
+        <p>&copy; 2026 Lucky Air Co., Ltd. - Tu aerolínea de confianza.</p>
     </footer>
 
 </body>

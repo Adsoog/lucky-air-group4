@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky Air - Reserva de Vuelos</title>
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Lucky Air</h1>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="reserva.html">Reserva de Vuelos</a></li>
+                <li><a href="paquetes.html">Paquetes</a></li>
+                <li><a href="atencion.html">Atención al Cliente</a></li>
+                <li><a href="trabajo.html">Portal de Trabajo</a></li>
+                <li><a href="quejas.html">Quejas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="booking-main">
+        <section id="flight-search">
+            <h2>Encuentra tu Vuelo</h2>
+            <p>Selecciona tu punto de partida y tu destino final para explorar nuestras tarifas de bajo costo.</p>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Buscador de Rutas</legend>
+
+                    <p>
+                        <label>Tipo de viaje:</label><br>
+                        <input type="radio" id="round-trip" name="trip_type" value="round" checked>
+                        <label for="round-trip">Ida y vuelta</label>
+                        <input type="radio" id="one-way" name="trip_type" value="one">
+                        <label for="one-way">Solo ida</label>
+                    </p>
+
+                    <label for="origin"><strong>Inicio (Origen):</strong></label>
+                    <select id="origin" name="origin_city" required>
+                        <option value="">Selecciona ciudad de salida</option>
+                        <optgroup label="Hub Principal">
+                            <option value="KMG">Kunming (KMG)</option>
+                        </optgroup>
+                        <optgroup label="Otros Aeropuertos Yunnan">
+                            <option value="DLU">Dali (DLU)</option>
+                            <option value="JHG">Xishuangbanna (JHG)</option>
+                            <option value="LJG">Lijiang (LJG)</option>
+                        </optgroup>
+                    </select>
+
+                    <span> &rarr; </span>
+
+                    <label for="destination"><strong>Fin (Destino):</strong></label>
+                    <select id="destination" name="dest_city" required>
+                        <option value="">Selecciona ciudad de llegada</option>
+                        <option value="PEK">Beijing (PEK)</option>
+                        <option value="SHA">Shanghai (SHA)</option>
+                        <option value="CAN">Guangzhou (CAN)</option>
+                        <option value="CTU">Chengdu (CTU)</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="departure-date">Fecha de Salida:</label>
+                    <input type="date" id="departure-date" name="dep_date" required>
+
+                    <label for="return-date">Fecha de Regreso:</label>
+                    <input type="date" id="return-date" name="ret_date">
+
+                    <br><br>
+
+                    <label for="passengers">Pasajeros:</label>
+                    <input type="number" id="passengers" name="qty" min="1" max="9" value="1">
+
+                    <br><br>
+
+                    <button type="submit">Ver Disponibilidad y Precios</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="future-routes">
+            <h3>El Futuro de Nuestras Rutas</h3>
+            <p>Estamos expandiendo nuestra red para 2026. Muy pronto podrás volar directamente desde aeropuertos secundarios a grandes metrópolis:</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nueva Ruta</th>
+                        <th>Estado</th>
+                        <th>Fecha Estimada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dali &harr; Shenzhen</td>
+                        <td>En pruebas</td>
+                        <td>Junio 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Lijiang &harr; Hangzhou</td>
+                        <td>Planificación</td>
+                        <td>Agosto 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <aside id="booking-tips">
+        <h3>Consejos de Reserva</h3>
+        <article>
+            <h4>Ahorra más del 20%</h4>
+            <p>Al reservar directamente en <strong>luckyair.net</strong>, accedes a descuentos que no están disponibles en agencias físicas.</p>
+        </article>
+        <hr>
+        <article>
+            <h4>Check-in Digital</h4>
+            <p>Recuerda que nuestra operación es 100% en línea. Valida tu boleto digitalmente y evita filas en el mostrador.</p>
+        </article>
+    </aside>
+
+    <footer id="main-footer">
+        <hr>
+        <p>Lucky Air - Operando bajo el modelo de eficiencia de Southwest Airlines.</p>
+        <p>&copy; 2026 Adso Martin Obregon Gutierrez</p>
+    </footer>
+
+</body>
+</html>
