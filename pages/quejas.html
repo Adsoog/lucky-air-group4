@@ -6,52 +6,55 @@
 </head>
 <body>
 
-    <header id="main-header">
-        <h1>Lucky Air</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="reserva.html">Reserva de Vuelos</a></li>
-                <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="atencion.html">Atención al Cliente</a></li>
-                <li><a href="trabajo.html">Portal de Trabajo</a></li>
-                <li><a href="quejas.html">Quejas</a></li>
-            </ul>
+    <header id="main-header" class="header">
+        <h1 class="header-title">Lucky Air</h1>
+        <nav id="main-nav" class="nav-menu">
+            <a href="../index.html" class="nav-link">Inicio</a> |
+            <a href="reserva.html" class="nav-link">Reserva de Vuelos</a> |
+            <a href="paquetes.html" class="nav-link">Paquetes</a> |
+            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
+            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
+            <a href="quejas.html" class="nav-link active">Quejas</a>
         </nav>
     </header>
 
-    <main id="complaints-content">
-        <section id="empathy-header">
-            <h2>Estamos aquí para mejorar</h2>
-            <p>
+    <main id="complaints-content" class="main-content">
+        <section id="empathy-header" class="hero-section">
+            <h2 class="section-title">Estamos aquí para mejorar</h2>
+            <p class="section-description">
                 En Lucky Air, sabemos que tu viaje es importante. Si algo no salió como esperabas,
                 por favor cuéntanos. Tu opinión es la base de nuestro crecimiento en Yunnan.
             </p>
+
+            <figure class="hero-image-container">
+                <img src="../assets/banner-quejas.png" alt="Personal de atención al cliente escuchando amablemente a un pasajero" width="800" height="400" class="hero-image">
+                <figcaption>Tu voz nos ayuda a perfeccionar nuestros procesos operativos.</figcaption>
+            </figure>
         </section>
 
-        <section id="complaint-form">
-            <form action="#" method="post">
-                <fieldset>
+        <section id="complaint-form" class="form-section">
+            <form action="#" method="post" enctype="multipart/form-data" class="contact-form">
+                <fieldset class="form-group">
                     <legend>Datos Personales</legend>
                     <label for="full-name">Nombre Completo:</label>
-                    <input type="text" id="full-name" name="user_name" required>
+                    <input type="text" id="full-name" name="user_name" required class="form-input">
                     <br><br>
                     <label for="user-email">Correo Electrónico:</label>
-                    <input type="email" id="user-email" name="user_email" placeholder="ejemplo@correo.com" required>
+                    <input type="email" id="user-email" name="user_email" placeholder="ejemplo@correo.com" required class="form-input">
                     <br><br>
                     <label for="user-phone">Teléfono de contacto:</label>
-                    <input type="tel" id="user-phone" name="user_phone">
+                    <input type="tel" id="user-phone" name="user_phone" class="form-input">
                 </fieldset>
 
                 <br>
 
-                <fieldset>
+                <fieldset class="form-group">
                     <legend>Detalles del Incidente</legend>
                     <label for="ticket-number">Número de Boleto o Reserva:</label>
-                    <input type="text" id="ticket-number" name="ticket_id" maxlength="10">
+                    <input type="text" id="ticket-number" name="ticket_id" maxlength="10" class="form-input">
                     <br><br>
                     <label for="issue-type">Motivo de tu mensaje:</label>
-                    <select id="issue-type" name="issue_category">
+                    <select id="issue-type" name="issue_category" class="form-select">
                         <optgroup label="Servicios en Vuelo">
                             <option value="crew">Trato del personal</option>
                             <option value="comfort">Comodidad en cabina</option>
@@ -68,45 +71,47 @@
                     <br><br>
                     <label for="message">Cuéntanos qué sucedió:</label>
                     <br>
-                    <textarea id="message" name="user_message" rows="6" cols="50" placeholder="Describe los hechos de forma detallada..."></textarea>
+                    <textarea id="message" name="user_message" rows="6" cols="50" placeholder="Describe los hechos de forma detallada..." class="form-textarea" required></textarea>
                     <br><br>
                     <label for="evidence">Adjuntar evidencia (fotos de maletas, boletos):</label>
-                    <input type="file" id="evidence" name="user_file">
+                    <input type="file" id="evidence" name="user_file" class="form-file">
                 </fieldset>
 
                 <br>
-                <button type="submit">Enviar mi mensaje</button>
-                <button type="reset">Limpiar formulario</button>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar mi mensaje</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar formulario</button>
+                </div>
             </form>
         </section>
 
-        <section id="other-channels">
-            <h3>Otros Canales de Atención</h3>
-            <p>Si prefieres una atención más directa, también puedes encontrarnos en:</p>
-            <ul>
-                <li><strong>Comunidad Lucky Air:</strong> Foro oficial de pasajeros en línea.</li>
-                <li><strong>Oficina en Aeropuerto:</strong> Módulos de atención en Kunming y Dali.</li>
-                <li><strong>Redes Sociales:</strong> WeChat y Weibo (Atención 24/7).</li>
+        <section id="other-channels" class="channels-section">
+            <h3 class="section-title">Otros Canales de Atención</h3>
+            <p class="section-description">Si prefieres una atención más directa, también puedes encontrarnos en:</p>
+            <ul class="channels-list">
+                <li class="channel-item"><strong class="channel-name">Comunidad Lucky Air:</strong> Foro oficial de pasajeros en línea.</li>
+                <li class="channel-item"><strong class="channel-name">Oficina en Aeropuerto:</strong> Módulos de atención en Kunming y Dali.</li>
+                <li class="channel-item"><strong class="channel-name">Redes Sociales:</strong> WeChat y Weibo (Atención 24/7).</li>
             </ul>
         </section>
     </main>
 
-    <aside id="rights-sidebar">
-        <h3>Tus Derechos</h3>
-        <p>Como pasajero, tienes derecho a:</p>
-        <ul>
-            <li>Información veraz sobre retrasos.</li>
-            <li>Compensación por pérdida de equipaje según regulaciones locales.</li>
-            <li>Un trato digno y respetuoso.</li>
+    <aside id="rights-sidebar" class="sidebar">
+        <h3 class="sidebar-title">Tus Derechos</h3>
+        <p class="sidebar-description">Como pasajero, tienes derecho a:</p>
+        <ul class="rights-list">
+            <li class="right-item">Información veraz sobre retrasos.</li>
+            <li class="right-item">Compensación por pérdida de equipaje según regulaciones locales.</li>
+            <li class="right-item">Un trato digno y respetuoso.</li>
         </ul>
-        <hr>
-        <p><strong>Dato:</strong> El 95% de nuestras quejas se resuelven en menos de 48 horas hábiles.</p>
+        <hr class="divider">
+        <p class="sidebar-fact"><strong>Dato:</strong> El 95% de nuestras quejas se resuelven en menos de 48 horas hábiles.</p>
     </aside>
 
-    <footer id="main-footer">
-        <hr>
-        <p>Libro de Reclamaciones Virtual - Conforme a las normativas de aviación civil de China.</p>
-        <p>&copy; 2026 Lucky Air Co., Ltd.</p>
+    <footer id="main-footer" class="footer">
+        <hr class="divider">
+        <p class="footer-mission">Libro de Reclamaciones Virtual - Conforme a las normativas de aviación civil de China.</p>
+        <p class="footer-copy">&copy; 2026 Lucky Air Co., Ltd.</p>
     </footer>
 
 </body>

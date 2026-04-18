@@ -6,31 +6,34 @@
 </head>
 <body>
 
-    <header id="main-header">
-        <h1>Lucky Air</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="reserva.html">Reserva de Vuelos</a></li>
-                <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="atencion.html">Atención al Cliente</a></li>
-                <li><a href="trabajo.html">Portal de Trabajo</a></li>
-                <li><a href="quejas.html">Quejas</a></li>
-            </ul>
+    <header id="main-header" class="header">
+        <h1 class="header-title">Lucky Air</h1>
+        <nav id="main-nav" class="nav-menu">
+            <a href="../index.html" class="nav-link">Inicio</a> |
+            <a href="reserva.html" class="nav-link">Reserva de Vuelos</a> |
+            <a href="paquetes.html" class="nav-link active">Paquetes</a> |
+            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
+            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
+            <a href="quejas.html" class="nav-link">Quejas</a>
         </nav>
     </header>
 
-    <main id="packages-content">
-        <section id="package-search">
-            <h2>Vuelo + Hotel: Ahorra en tu aventura</h2>
-            <p>Reserva todo junto y obtén descuentos exclusivos en los mejores destinos de la provincia.</p>
+    <main id="packages-content" class="main-content">
+        <section id="package-search" class="search-section">
+            <h2 class="section-title">Vuelo + Hotel: Ahorra en tu aventura</h2>
+            <p class="section-description">Reserva todo junto y obtén descuentos exclusivos en los mejores destinos de la provincia.</p>
 
-            <form action="#" method="get">
-                <fieldset>
+            <figure class="hero-image-container">
+                <img src="../assets/banner-paquetes.png" alt="Vista panorámica de la Ciudad Antigua de Dali" width="800" height="400" class="hero-image">
+                <figcaption>Descubre la magia de Yunnan con nuestros paquetes todo incluido.</figcaption>
+            </figure>
+
+            <form action="#" method="get" class="booking-form">
+                <fieldset class="form-group">
                     <legend>Buscador de Paquetes</legend>
 
                     <label for="dest-pkg">Destino:</label>
-                    <select id="dest-pkg" name="destination">
+                    <select id="dest-pkg" name="destination" class="form-select">
                         <option value="dali">Dali - Ciudad Antigua</option>
                         <option value="xishuang">Xishuangbanna - Selva Tropical</option>
                         <option value="kunming">Kunming - Ciudad de la Eterna Primavera</option>
@@ -39,55 +42,57 @@
                     <br><br>
 
                     <label for="checkin">Entrada al Hotel:</label>
-                    <input type="date" id="checkin" name="start_date">
+                    <input type="date" id="checkin" name="start_date" class="form-input">
 
                     <label for="checkout">Salida del Hotel:</label>
-                    <input type="date" id="checkout" name="end_date">
+                    <input type="date" id="checkout" name="end_date" class="form-input">
 
                     <br><br>
 
                     <label for="rooms">Habitaciones:</label>
-                    <input type="number" id="rooms" name="room_qty" min="1" max="3" value="1">
+                    <input type="number" id="rooms" name="room_qty" min="1" max="3" value="1" class="form-input">
 
                     <label for="guests">Huéspedes:</label>
-                    <select id="guests" name="guest_qty">
+                    <select id="guests" name="guest_qty" class="form-select">
                         <option value="1">1 Adulto</option>
                         <option value="2" selected>2 Adultos</option>
                         <option value="3">Familiar (2 Adultos + Niños)</option>
                     </select>
 
                     <br><br>
-                    <button type="submit">Buscar Paquetes Disponibles</button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Buscar Paquetes Disponibles</button>
+                    </div>
                 </fieldset>
             </form>
         </section>
 
-        <section id="featured-bundles">
-            <h3>Paquetes Recomendados</h3>
-            <article>
-                <h4>Explora Dali Mágico</h4>
-                <p>Incluye: Vuelo ida y vuelta + 3 noches en Hotel Boutique + Tour por el Lago Erhai.</p>
-                <p><strong>Desde: 1,299 CNY por persona.</strong></p>
-                <button type="button">Ver detalles</button>
+        <section id="featured-bundles" class="packages-section">
+            <h3 class="section-title">Paquetes Recomendados</h3>
+            <article class="package-card">
+                <h4 class="package-title">Explora Dali Mágico</h4>
+                <p class="package-details">Incluye: Vuelo ida y vuelta + 3 noches en Hotel Boutique + Tour por el Lago Erhai.</p>
+                <p class="package-price"><strong>Desde: 1,299 CNY por persona.</strong></p>
+                <a href="#" class="btn btn-secondary">Ver detalles</a>
             </article>
-            <hr>
-            <article>
-                <h4>Aventura en Xishuangbanna</h4>
-                <p>Incluye: Vuelo ida y vuelta + 4 noches en Resort con desayuno + Traslados aeropuerto.</p>
-                <p><strong>Desde: 1,550 CNY por persona.</strong></p>
-                <button type="button">Ver detalles</button>
+            <hr class="divider">
+            <article class="package-card">
+                <h4 class="package-title">Aventura en Xishuangbanna</h4>
+                <p class="package-details">Incluye: Vuelo ida y vuelta + 4 noches en Resort con desayuno + Traslados aeropuerto.</p>
+                <p class="package-price"><strong>Desde: 1,550 CNY por persona.</strong></p>
+                <a href="#" class="btn btn-secondary">Ver detalles</a>
             </article>
         </section>
 
-        <section id="extra-services">
-            <h3>Servicios Adicionales</h3>
-            <p>Haz tu viaje más cómodo con nuestros servicios complementarios:</p>
-            <table border="1">
+        <section id="extra-services" class="services-section">
+            <h3 class="section-title">Servicios Adicionales</h3>
+            <p class="section-description">Haz tu viaje más cómodo con nuestros servicios complementarios:</p>
+            <table border="1" class="data-table">
                 <thead>
                     <tr>
-                        <th>Servicio</th>
-                        <th>Descripción</th>
-                        <th>Precio sugerido</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio sugerido</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -111,22 +116,24 @@
         </section>
     </main>
 
-    <aside id="benefits-sidebar">
-        <h3>¿Por qué reservar paquetes?</h3>
-        <ul>
-            <li><strong>Precio Final:</strong> Sin cargos ocultos al finalizar la compra.</li>
-            <li><strong>Garantía Lucky:</strong> Soporte prioritario en caso de cambios de vuelo.</li>
-            <li><strong>Alianzas Locales:</strong> Trabajamos directamente con hoteles en Yunnan para darte el mejor precio.</li>
+    <aside id="benefits-sidebar" class="sidebar">
+        <h3 class="sidebar-title">¿Por qué reservar paquetes?</h3>
+        <ul class="benefits-list">
+            <li class="benefit-item"><strong class="benefit-highlight">Precio Final:</strong> Sin cargos ocultos al finalizar la compra.</li>
+            <li class="benefit-item"><strong class="benefit-highlight">Garantía Lucky:</strong> Soporte prioritario en caso de cambios de vuelo.</li>
+            <li class="benefit-item"><strong class="benefit-highlight">Alianzas Locales:</strong> Trabajamos directamente con hoteles en Yunnan para darte el mejor precio.</li>
         </ul>
-        <hr>
-        <h4>Socio Estratégico</h4>
-        <p>Lucky Air colabora con el gobierno de la provincia para fomentar el turismo sostenible.</p>
+        <hr class="divider">
+        <article class="partner-info">
+            <h4 class="partner-title">Socio Estratégico</h4>
+            <p class="partner-description">Lucky Air colabora con el gobierno de la provincia para fomentar el turismo sostenible.</p>
+        </article>
     </aside>
 
-    <footer id="main-footer">
-        <hr>
-        <p>Lucky Air - Conectando destinos con eficiencia digital.</p>
-        <p>&copy; 2026 Adso Martin Obregon Gutierrez</p>
+    <footer id="main-footer" class="footer">
+        <hr class="divider">
+        <p class="footer-mission">Lucky Air - Conectando destinos con eficiencia digital.</p>
+        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
     </footer>
 
 </body>

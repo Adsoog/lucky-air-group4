@@ -6,39 +6,43 @@
 </head>
 <body>
 
-    <header id="main-header">
-        <h1>Lucky Air</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="reserva.html">Reserva de Vuelos</a></li>
-                <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="atencion.html">Atención al Cliente</a></li>
-                <li><a href="trabajo.html">Portal de Trabajo</a></li>
-                <li><a href="quejas.html">Quejas</a></li>
-            </ul>
+    <header id="main-header" class="header">
+        <h1 class="header-title">Lucky Air</h1>
+        <nav id="main-nav" class="nav-menu">
+            <a href="../index.html" class="nav-link">Inicio</a> |
+            <a href="reserva.html" class="nav-link active">Reserva de Vuelos</a> |
+            <a href="paquetes.html" class="nav-link">Paquetes</a> |
+            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
+            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
+            <a href="quejas.html" class="nav-link">Quejas</a>
         </nav>
     </header>
 
-    <main id="booking-main">
-        <section id="flight-search">
-            <h2>Encuentra tu Vuelo</h2>
-            <p>Selecciona tu punto de partida y tu destino final para explorar nuestras tarifas de bajo costo.</p>
+    <main id="booking-main" class="main-content">
+        <section id="flight-search" class="search-section">
+            <h2 class="section-title">Encuentra tu Vuelo</h2>
+            <p class="section-description">Selecciona tu punto de partida y tu destino final para explorar nuestras tarifas de bajo costo.</p>
 
-            <form action="#" method="get">
-                <fieldset>
+            <figure class="hero-image-container">
+                <img src="../assets/banner-reserva.jpg" alt="Avión de Lucky Air volando sobre las nubes" width="800" height="400" class="hero-image">
+                <figcaption>Conectando la provincia de Yunnan con el mundo.</figcaption>
+            </figure>
+
+            <form action="#" method="get" class="booking-form">
+                <fieldset class="form-group">
                     <legend>Buscador de Rutas</legend>
 
-                    <p>
+                    <p class="radio-group">
                         <label>Tipo de viaje:</label><br>
-                        <input type="radio" id="round-trip" name="trip_type" value="round" checked>
+                        <input type="radio" id="round-trip" name="trip_type" value="round" checked class="form-radio">
                         <label for="round-trip">Ida y vuelta</label>
-                        <input type="radio" id="one-way" name="trip_type" value="one">
+
+                        <input type="radio" id="one-way" name="trip_type" value="one" class="form-radio">
                         <label for="one-way">Solo ida</label>
                     </p>
 
                     <label for="origin"><strong>Inicio (Origen):</strong></label>
-                    <select id="origin" name="origin_city" required>
+                    <select id="origin" name="origin_city" required class="form-select">
                         <option value="">Selecciona ciudad de salida</option>
                         <optgroup label="Hub Principal">
                             <option value="KMG">Kunming (KMG)</option>
@@ -50,10 +54,10 @@
                         </optgroup>
                     </select>
 
-                    <span> &rarr; </span>
+                    <span class="separator"> &rarr; </span>
 
                     <label for="destination"><strong>Fin (Destino):</strong></label>
-                    <select id="destination" name="dest_city" required>
+                    <select id="destination" name="dest_city" required class="form-select">
                         <option value="">Selecciona ciudad de llegada</option>
                         <option value="PEK">Beijing (PEK)</option>
                         <option value="SHA">Shanghai (SHA)</option>
@@ -64,32 +68,36 @@
                     <br><br>
 
                     <label for="departure-date">Fecha de Salida:</label>
-                    <input type="date" id="departure-date" name="dep_date" required>
+                    <input type="date" id="departure-date" name="dep_date" required class="form-input">
 
                     <label for="return-date">Fecha de Regreso:</label>
-                    <input type="date" id="return-date" name="ret_date">
+                    <input type="date" id="return-date" name="ret_date" class="form-input">
 
                     <br><br>
 
                     <label for="passengers">Pasajeros:</label>
-                    <input type="number" id="passengers" name="qty" min="1" max="9" value="1">
+                    <input type="number" id="passengers" name="qty" min="1" max="9" value="1" class="form-input">
 
                     <br><br>
 
-                    <button type="submit">Ver Disponibilidad y Precios</button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Ver Disponibilidad y Precios</button>
+                        <button type="reset" class="btn btn-secondary">Limpiar Datos</button>
+                    </div>
                 </fieldset>
             </form>
         </section>
 
-        <section id="future-routes">
-            <h3>El Futuro de Nuestras Rutas</h3>
+        <section id="future-routes" class="routes-section">
+            <h3 class="section-title">El Futuro de Nuestras Rutas</h3>
             <p>Estamos expandiendo nuestra red para 2026. Muy pronto podrás volar directamente desde aeropuertos secundarios a grandes metrópolis:</p>
-            <table border="1">
+
+            <table border="1" class="data-table">
                 <thead>
                     <tr>
-                        <th>Nueva Ruta</th>
-                        <th>Estado</th>
-                        <th>Fecha Estimada</th>
+                        <th scope="col">Nueva Ruta</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Fecha Estimada</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -108,23 +116,23 @@
         </section>
     </main>
 
-    <aside id="booking-tips">
-        <h3>Consejos de Reserva</h3>
-        <article>
-            <h4>Ahorra más del 20%</h4>
-            <p>Al reservar directamente en <strong>luckyair.net</strong>, accedes a descuentos que no están disponibles en agencias físicas.</p>
+    <aside id="booking-tips" class="sidebar">
+        <h3 class="sidebar-title">Consejos de Reserva</h3>
+        <article class="tip-item">
+            <h4 class="tip-title">Ahorra más del 20%</h4>
+            <p class="tip-description">Al reservar directamente en <strong>luckyair.net</strong>, accedes a descuentos que no están disponibles en agencias físicas.</p>
         </article>
-        <hr>
-        <article>
-            <h4>Check-in Digital</h4>
-            <p>Recuerda que nuestra operación es 100% en línea. Valida tu boleto digitalmente y evita filas en el mostrador.</p>
+        <hr class="divider">
+        <article class="tip-item">
+            <h4 class="tip-title">Check-in Digital</h4>
+            <p class="tip-description">Recuerda que nuestra operación es 100% en línea. Valida tu boleto digitalmente y evita filas en el mostrador.</p>
         </article>
     </aside>
 
-    <footer id="main-footer">
-        <hr>
-        <p>Lucky Air - Operando bajo el modelo de eficiencia de Southwest Airlines.</p>
-        <p>&copy; 2026 Adso Martin Obregon Gutierrez</p>
+    <footer id="main-footer" class="footer">
+        <hr class="divider">
+        <p class="footer-mission">Lucky Air - Operando bajo el modelo de eficiencia de Southwest Airlines.</p>
+        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
     </footer>
 
 </body>

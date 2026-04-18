@@ -6,67 +6,73 @@
 </head>
 <body>
 
-    <header id="main-header">
-        <h1>Lucky Air</h1>
-        <nav id="main-nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="reserva.html">Reserva de Vuelos</a></li>
-                <li><a href="paquetes.html">Paquetes</a></li>
-                <li><a href="atencion.html">Atención al Cliente</a></li>
-                <li><a href="trabajo.html">Portal de Trabajo</a></li>
-                <li><a href="quejas.html">Quejas</a></li>
-            </ul>
+    <header id="main-header" class="header">
+        <h1 class="header-title">Lucky Air</h1>
+        <nav id="main-nav" class="nav-menu">
+            <a href="../index.html" class="nav-link">Inicio</a> |
+            <a href="reserva.html" class="nav-link">Reserva de Vuelos</a> |
+            <a href="paquetes.html" class="nav-link">Paquetes</a> |
+            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
+            <a href="trabajo.html" class="nav-link active">Portal de Trabajo</a> |
+            <a href="quejas.html" class="nav-link">Quejas</a>
         </nav>
     </header>
 
-    <main id="careers-content">
-        <section id="recruitment-hero">
-            <h2>Únete a la Familia Lucky Air</h2>
-            <p>
+    <main id="careers-content" class="main-content">
+        <section id="recruitment-hero" class="hero-section">
+            <h2 class="section-title">Únete a la Familia Lucky Air</h2>
+            <p class="section-description">
                 Buscamos personas apasionadas por la aviación y el servicio al cliente para
                 formar parte de la aerolínea con mayor crecimiento en el suroeste de China.
             </p>
+
+            <figure class="hero-image-container">
+                <img src="../assets/banner-trabajo.jpg" alt="Equipo de profesionales de Lucky Air sonriendo en el aeropuerto" width="800" height="400" class="hero-image">
+                <figcaption>Desarrolla tu carrera profesional en un entorno dinámico y global.</figcaption>
+            </figure>
         </section>
 
-        <section id="open-positions">
-            <h3>Vacantes Disponibles</h3>
-            <article>
-                <h4>Tripulación de Cabina (Azafatos/as)</h4>
-                <p>Ubicación: Kunming. Requisito: Idiomas (Chino e Inglés) y excelente trato personal.</p>
+        <section id="open-positions" class="jobs-section">
+            <h3 class="section-title">Vacantes Disponibles</h3>
+
+            <article class="job-card">
+                <h4 class="job-title">Tripulación de Cabina (Azafatos/as)</h4>
+                <p class="job-details">Ubicación: Kunming. Requisito: Idiomas (Chino e Inglés) y excelente trato personal.</p>
             </article>
-            <article>
-                <h4>Personal de IT y Sistemas</h4>
-                <p>Ubicación: Remoto/Kunming. Enfoque: Mantenimiento de plataforma e-commerce y desarrollo de APIs.</p>
+
+            <article class="job-card">
+                <h4 class="job-title">Ingeniería de Sistemas y Backend</h4>
+                <p class="job-details">Ubicación: Remoto/Kunming. Enfoque: Desarrollo de sistemas ERP, arquitectura backend (Python/Django) y despliegue en contenedores (Docker).</p>
             </article>
-            <article>
-                <h4>Agentes de Servicio en Tierra</h4>
-                <p>Ubicación: Aeropuertos de Dali y Xishuangbanna.</p>
+
+            <article class="job-card">
+                <h4 class="job-title">Agentes de Servicio en Tierra</h4>
+                <p class="job-details">Ubicación: Aeropuertos de Dali y Xishuangbanna.</p>
             </article>
         </section>
 
-        <hr>
+        <hr class="divider">
 
-        <section id="application-form">
-            <h3>Postula Aquí</h3>
-            <p>Envíanos tu información y nos pondremos en contacto contigo para una entrevista inicial.</p>
+        <section id="application-form" class="application-section">
+            <h3 class="section-title">Postula Aquí</h3>
+            <p class="section-description">Envíanos tu información y nos pondremos en contacto contigo para una entrevista inicial.</p>
 
-            <form action="#" method="post" enctype="multipart/form-data">
-                <fieldset>
+            <form action="#" method="post" enctype="multipart/form-data" class="job-form">
+                <fieldset class="form-group">
                     <legend>Información del Candidato</legend>
 
                     <label for="applicant-name">Nombre y Apellidos:</label>
-                    <input type="text" id="applicant-name" name="full_name" required>
+                    <input type="text" id="applicant-name" name="full_name" required class="form-input">
 
                     <br><br>
 
                     <label for="applicant-email">Correo Electrónico:</label>
-                    <input type="email" id="applicant-email" name="email" required>
+                    <input type="email" id="applicant-email" name="email" required class="form-input">
 
                     <br><br>
 
                     <label for="position-apply">Posición de interés:</label>
-                    <select id="position-apply" name="position">
+                    <select id="position-apply" name="position" class="form-select">
                         <option value="cabin">Tripulación de Cabina</option>
                         <option value="it">Sistemas / IT</option>
                         <option value="ground">Servicio en Tierra</option>
@@ -76,37 +82,39 @@
                     <br><br>
 
                     <label for="cv-file">Sube tu CV (PDF o Word):</label>
-                    <input type="file" id="cv-file" name="resume" accept=".pdf,.doc,.docx" required>
+                    <input type="file" id="cv-file" name="resume" accept=".pdf,.doc,.docx" required class="form-file">
 
                     <br><br>
 
                     <label for="cover-letter">Breve presentación (Opcional):</label>
                     <br>
-                    <textarea id="cover-letter" name="bio" rows="4" cols="40" placeholder="Cuéntanos por qué quieres trabajar en Lucky Air..."></textarea>
+                    <textarea id="cover-letter" name="bio" rows="4" cols="40" placeholder="Cuéntanos por qué quieres trabajar en Lucky Air..." class="form-textarea"></textarea>
                 </fieldset>
 
                 <br>
-                <button type="submit">Enviar Postulación</button>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar Postulación</button>
+                </div>
             </form>
         </section>
     </main>
 
-    <aside id="benefits-careers">
-        <h3>Beneficios de ser Lucky</h3>
-        <ul>
-            <li><strong>Vuelos Gratuitos:</strong> Pasajes liberados para ti y tu familia directa.</li>
-            <li><strong>Seguro Médico:</strong> Cobertura de salud integral desde el primer día.</li>
-            <li><strong>Crecimiento:</strong> Plan de carrera para ascender a posiciones de mando.</li>
-            <li><strong>Capacitación:</strong> Entrenamiento constante en estándares internacionales.</li>
+    <aside id="benefits-careers" class="sidebar">
+        <h3 class="sidebar-title">Beneficios de ser Lucky</h3>
+        <ul class="benefits-list">
+            <li class="benefit-item"><strong class="benefit-highlight">Vuelos Gratuitos:</strong> Pasajes liberados para ti y tu familia directa.</li>
+            <li class="benefit-item"><strong class="benefit-highlight">Seguro Médico:</strong> Cobertura de salud integral desde el primer día.</li>
+            <li class="benefit-item"><strong class="benefit-highlight">Crecimiento:</strong> Plan de carrera para ascender a posiciones de mando.</li>
+            <li class="benefit-item"><strong class="benefit-highlight">Capacitación:</strong> Entrenamiento constante en estándares internacionales.</li>
         </ul>
-        <hr>
-        <p><em>"En Lucky Air no solo transportamos personas, cumplimos sueños."</em></p>
+        <hr class="divider">
+        <p class="quote"><em>"En Lucky Air no solo transportamos personas, cumplimos sueños."</em></p>
     </aside>
 
-    <footer id="main-footer">
-        <hr>
-        <p>Lucky Air Recruitment Center - Departamento de Recursos Humanos.</p>
-        <p>&copy; 2026 Lucky Air Co., Ltd. - Yunnan, China.</p>
+    <footer id="main-footer" class="footer">
+        <hr class="divider">
+        <p class="footer-mission">Lucky Air Recruitment Center - Departamento de Recursos Humanos.</p>
+        <p class="footer-copy">&copy; 2026 Lucky Air Co., Ltd. - Yunnan, China.</p>
     </footer>
 
 </body>
