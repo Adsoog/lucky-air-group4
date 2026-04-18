@@ -1,56 +1,54 @@
-# ✈️ Lucky Air - Grupo 4
+# ✈️ Lucky Air - Prototipo Frontend (Grupo 4)
 
-Proyecto académico basado en el caso **"E-commerce at Yunnan Lucky Air"**.
+Proyecto académico basado en la resolución del caso **"E-commerce at Yunnan Lucky Air"**. Este repositorio contiene la primera fase del desarrollo del prototipo web de la aerolínea.
 
-## 📚 Objetivo
+## 🎯 Objetivo del Proyecto
 
-Desarrollar una solución frontend simple utilizando tecnologías básicas:
+Desarrollar la arquitectura estructural y semántica de la plataforma web de Lucky Air utilizando **estrictamente HTML5 puro**. El objetivo principal es demostrar el dominio de la maquetación semántica y la accesibilidad web antes de la integración de capas de diseño (CSS) o interactividad (JavaScript).
 
-* HTML5
-* CSS3
-* JavaScript
+## 🏗️ Arquitectura y Estructura del Proyecto
 
-## 🧩 Alcance del proyecto
+El proyecto ha sido diseñado con una arquitectura escalable, separando los recursos y las vistas lógicamente:
 
-Este proyecto representa una versión simplificada del caso, enfocada en:
+    /lucky-air-group4
+     ├── 📁 assets/
+     │    ├── banner-paquetes.png
+     │    ├── banner-quejas.png
+     │    ├── banner-reserva.jpg
+     │    ├── banner-trabajo.jpg
+     │    ├── quiosco.jpg
+     │    ├── reportesucceswc3.png
+     │    └── reportwc3.png
+     ├── 📁 pages/
+     │    ├── atencion.html
+     │    ├── informe.html
+     │    ├── paquetes.html
+     │    ├── quejas.html
+     │    ├── reserva.html
+     │    └── trabajo.html
+     ├── 📄 index.html
+     └── 📄 README.md
 
-* Presentación del problema
-* Propuesta de soluciones digitales
-* Estructura web básica
+## 🛠️ Tecnologías y Estándares Utilizados
 
-## 🚀 Tecnologías utilizadas
+* **HTML5 (Strict):** Uso intensivo de etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<details>`).
+* **Formularios Avanzados:** Implementación de `<fieldset>`, `<datalist>`, `<optgroup>` y validaciones nativas de HTML.
+* **Nu Html Checker (W3C):** Todo el código ha sido sometido a auditoría mediante el validador oficial de la W3C, logrando **0 errores y 0 advertencias**.
 
-* HTML5
-* CSS3
-* JavaScript (Vanilla JS)
-* Live Server (para desarrollo local)
+## 📋 Reglas de la Fase Actual
 
-## 📁 Estructura del proyecto
+* ✅ **Solo HTML5 puro.**
+* ✅ Clases CSS preparadas y estructuradas (`class="..."`) para la siguiente fase, pero sin archivos `.css` vinculados.
+* ✅ Rutas relativas correctas entre directorios.
+* ❌ Cero uso de frameworks (React, Angular, etc.).
 
-```
-/lucky-air-group4
-  ├── index.html
-  ├── style.css
-  └── script.js
-```
+## 📊 Informe Técnico
 
-## 📏 Reglas del proyecto
-
-* ❌ No usar frameworks (React, Vue, Angular, etc.)
-* ❌ No usar librerías externas
-* ✅ Solo HTML, CSS y JavaScript puro
-* ✅ Código simple y entendible
-* ✅ Buen uso de etiquetas semánticas
+Se ha incluido una página específica (`pages/informe.html`) dentro del proyecto que detalla las decisiones arquitectónicas y muestra la evidencia fotográfica de la validación exitosa ante la W3C.
 
 ## 👥 Integrantes - Grupo 4
 
-* (Nombre 1)
-* (Nombre 2)
-* (Nombre 3)
-* (Tu nombre)
-
-## 📌 Notas
-
-Este proyecto es con fines educativos para el curso de Fundamentos de Frontend.
+* Adso Martin Obregon Gutierrez
 
 ---
+*Nota: Este proyecto es con fines educativos para el curso de Fundamentos de Frontend. Las capas de CSS y JS serán integradas en fases posteriores.*

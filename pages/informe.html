@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky Air - Informe Técnico</title>
+</head>
+<body>
+
+    <header id="main-header" class="header">
+        <h1 class="header-title">Lucky Air: Informe Técnico del Proyecto</h1>
+        <nav id="main-nav" class="nav-menu">
+            <a href="../index.html" class="nav-link">Inicio</a> |
+            <a href="reserva.html" class="nav-link">Reserva de Vuelos</a> |
+            <a href="paquetes.html" class="nav-link">Paquetes</a> |
+            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
+            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
+            <a href="quejas.html" class="nav-link">Quejas</a>
+        </nav>
+    </header>
+
+    <main id="report-content" class="main-content">
+        <section id="project-summary" class="report-section">
+            <h2 class="section-title">Resumen del Trabajo</h2>
+            <p class="section-description">
+                Este proyecto consistió en la maquetación frontend de un prototipo web para la aerolínea "Lucky Air",
+                utilizando estrictamente HTML5 puro sin la intervención de hojas de estilo (CSS) ni scripts (JavaScript).
+                El objetivo principal fue maximizar el potencial de la semántica web, asegurando una estructura lógica,
+                accesible y completamente validada bajo los estándares de la W3C (Nu Html Checker).
+            </p>
+            <p>
+                Se implementaron clases descriptivas en todas las etiquetas como preparación directa para una futura
+                integración de CSS, demostrando buenas prácticas de arquitectura frontend.
+            </p>
+        </section>
+
+        <section id="tags-used" class="report-section">
+            <h3 class="section-title">Etiquetas HTML5 Destacadas</h3>
+            <p>Se evitó el uso excesivo de contenedores genéricos, optando por etiquetas con valor semántico real:</p>
+
+            <dl class="tags-list">
+                <dt><strong>Estructura Principal:</strong></dt>
+                <dd><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</dd>
+
+                <dt><strong>Formularios Avanzados:</strong></dt>
+                <dd><code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> para agrupar datos lógicamente. <code>&lt;datalist&gt;</code> para sugerencias nativas de autocompletado. <code>&lt;optgroup&gt;</code> para categorizar opciones dentro de listas desplegables. Tipos de input específicos (date, tel, email, file con multipart/form-data).</dd>
+
+                <dt><strong>Contenido Multimedia y UI:</strong></dt>
+                <dd><code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code> para contextualizar imágenes. <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code> para crear menús tipo acordeón (FAQ) de forma nativa sin JavaScript.</dd>
+            </dl>
+        </section>
+
+        <section id="w3c-validation" class="report-section">
+            <h3 class="section-title">Evidencia de Validación W3C</h3>
+            <p>A continuación se presentan las capturas del proceso de validación utilizando el Nu Html Checker, evidenciando la corrección de errores estructurales (como la anidación incorrecta de elementos interactivos) hasta lograr una validación perfecta.</p>
+
+            <article class="evidence-item">
+                <h4 class="evidence-title">Fase 1: Reporte de Errores Inicial</h4>
+                <p>Identificación de errores de anidación y atributos obsoletos.</p>
+                <figure class="report-image-container">
+                    <img src="../assets/reportwc3.png" alt="Captura de pantalla mostrando errores iniciales en el validador W3C" width="800" class="report-image">
+                </figure>
+            </article>
+
+            <article class="evidence-item">
+                <h4 class="evidence-title">Fase 2: Validación Exitosa</h4>
+                <p>Código estructurado correctamente y libre de errores tras aplicar las correcciones semánticas.</p>
+                <figure class="report-image-container">
+                    <img src="../assets/reportesucceswc3.png" alt="Captura de pantalla mostrando el éxito en el validador W3C sin errores" width="800" class="report-image">
+                </figure>
+            </article>
+        </section>
+    </main>
+
+   <footer id="main-footer" class="footer">
+        <hr class="divider">
+        <nav class="footer-nav">
+            <a href="informe.html" class="nav-link">Ver Informe Técnico y Validación W3C</a>
+        </nav>
+        <p class="footer-mission">Lucky Air - Conforme a las normativas de aviación civil de China.</p>
+        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
+    </footer>
+
+</body>
+</html>
