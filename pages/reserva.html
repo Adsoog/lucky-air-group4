@@ -3,140 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>Lucky Air - Reserva de Vuelos</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/widget.css" />
+
+
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
+    <script type="module" src="../js/components/booking.js" defer></script>
 </head>
 <body>
 
-    <header id="main-header" class="header">
-        <h1 class="header-title">Lucky Air</h1>
-        <nav id="main-nav" class="nav-menu">
-            <a href="../index.html" class="nav-link">Inicio</a> |
-            <a href="reserva.html" class="nav-link active">Reserva de Vuelos</a> |
-            <a href="paquetes.html" class="nav-link">Paquetes</a> |
-            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
-            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
-            <a href="quejas.html" class="nav-link">Quejas</a>
-        </nav>
-    </header>
+    <app-navbar root-path=".."></app-navbar>
 
+    <div class="container">
     <main id="booking-main" class="main-content">
-        <section id="flight-search" class="search-section">
-            <h2 class="section-title">Encuentra tu Vuelo</h2>
-            <p class="section-description">Selecciona tu punto de partida y tu destino final para explorar nuestras tarifas de bajo costo.</p>
-
-            <figure class="hero-image-container">
-                <img src="../assets/banner-reserva.jpg" alt="Avión de Lucky Air volando sobre las nubes" width="800" height="400" class="hero-image">
-                <figcaption>Conectando la provincia de Yunnan con el mundo.</figcaption>
-            </figure>
-
-            <form action="#" method="get" class="booking-form">
-                <fieldset class="form-group">
-                    <legend>Buscador de Rutas</legend>
-
-                    <p class="radio-group">
-                        <label>Tipo de viaje:</label><br>
-                        <input type="radio" id="round-trip" name="trip_type" value="round" checked class="form-radio">
-                        <label for="round-trip">Ida y vuelta</label>
-
-                        <input type="radio" id="one-way" name="trip_type" value="one" class="form-radio">
-                        <label for="one-way">Solo ida</label>
-                    </p>
-
-                    <label for="origin"><strong>Inicio (Origen):</strong></label>
-                    <select id="origin" name="origin_city" required class="form-select">
-                        <option value="">Selecciona ciudad de salida</option>
-                        <optgroup label="Hub Principal">
-                            <option value="KMG">Kunming (KMG)</option>
-                        </optgroup>
-                        <optgroup label="Otros Aeropuertos Yunnan">
-                            <option value="DLU">Dali (DLU)</option>
-                            <option value="JHG">Xishuangbanna (JHG)</option>
-                            <option value="LJG">Lijiang (LJG)</option>
-                        </optgroup>
-                    </select>
-
-                    <span class="separator"> &rarr; </span>
-
-                    <label for="destination"><strong>Fin (Destino):</strong></label>
-                    <select id="destination" name="dest_city" required class="form-select">
-                        <option value="">Selecciona ciudad de llegada</option>
-                        <option value="PEK">Beijing (PEK)</option>
-                        <option value="SHA">Shanghai (SHA)</option>
-                        <option value="CAN">Guangzhou (CAN)</option>
-                        <option value="CTU">Chengdu (CTU)</option>
-                    </select>
-
-                    <br><br>
-
-                    <label for="departure-date">Fecha de Salida:</label>
-                    <input type="date" id="departure-date" name="dep_date" required class="form-input">
-
-                    <label for="return-date">Fecha de Regreso:</label>
-                    <input type="date" id="return-date" name="ret_date" class="form-input">
-
-                    <br><br>
-
-                    <label for="passengers">Pasajeros:</label>
-                    <input type="number" id="passengers" name="qty" min="1" max="9" value="1" class="form-input">
-
-                    <br><br>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Ver Disponibilidad y Precios</button>
-                        <button type="reset" class="btn btn-secondary">Limpiar Datos</button>
+        <section class="modern-booking-widget">
+            <div class="widget-tabs">
+                <button class="widget-tab active">Vuelos</button>
+                <button class="widget-tab">Paquetes</button>
+            </div>
+            <div class="widget-body">
+                <div class="widget-header">
+                    <h2 class="widget-title">¿A dónde quieres ir?</h2>
+                    <div class="widget-options">
+                        <button type="button" class="pill active"><span class="check">✓</span> Ida y vuelta</button>
+                        <button type="button" class="pill">Solo ida</button>
+                        <button type="button" class="pill">Multidestino</button>
+                        <button type="button" class="dropdown-btn">v</button>
                     </div>
-                </fieldset>
-            </form>
-        </section>
+                </div>
 
-        <section id="future-routes" class="routes-section">
-            <h3 class="section-title">El Futuro de Nuestras Rutas</h3>
-            <p>Estamos expandiendo nuestra red para 2026. Muy pronto podrás volar directamente desde aeropuertos secundarios a grandes metrópolis:</p>
+                <form class="widget-form" action="#" method="get">
+                    <div class="widget-locations">
+                        <div class="location-input left">
+                            <label for="origen">Desde</label>
+                            <div class="autocomplete-container">
+                                <input type="text" id="origen" placeholder="Ingresa un origen" autocomplete="off">
+                                <div id="origen-dropdown" class="autocomplete-dropdown"></div>
+                            </div>
+                        </div>
+                        <button type="button" class="swap-btn">⇄</button>
+                        <div class="location-input right">
+                            <label for="destino">Hacia</label>
+                            <div class="autocomplete-container">
+                                <input type="text" id="destino" placeholder="Ingresa un destino" autocomplete="off">
+                                <div id="destino-dropdown" class="autocomplete-dropdown"></div>
+                            </div>
+                        </div>
+                    </div>
 
-            <table border="1" class="data-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Nueva Ruta</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Fecha Estimada</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dali &harr; Shenzhen</td>
-                        <td>En pruebas</td>
-                        <td>Junio 2026</td>
-                    </tr>
-                    <tr>
-                        <td>Lijiang &harr; Hangzhou</td>
-                        <td>Planificación</td>
-                        <td>Agosto 2026</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <div class="widget-details">
+                        <div class="widget-locations dates-group">
+                            <div class="location-input left">
+                                <label for="fecha-ida">Ida</label>
+                                <input type="date" id="fecha-ida">
+                            </div>
+                            <div class="location-input right">
+                                <label for="fecha-vuelta">Vuelta</label>
+                                <input type="date" id="fecha-vuelta">
+                            </div>
+                        </div>
+
+                        <div class="widget-locations passenger-group">
+                            <div class="location-input single">
+                                <label for="pasajeros-clase">Pasajeros y Clase</label>
+                                <select id="pasajeros-clase" class="dropdown-invisible">
+                                    <option value="1_eco">1 Pasajero, Economy</option>
+                                    <option value="2_eco">2 Pasajeros, Economy</option>
+                                    <option value="1_bus">1 Pasajero, Business</option>
+                                    <option value="2_bus">2 Pasajeros, Business</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="widget-locations promo-group">
+                            <div class="location-input single">
+                                <label for="codigo-promo">Código Promocional</label>
+                                <input type="text" id="codigo-promo" placeholder="Ej. LUCKY2026">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-footer-actions">
+                        <button type="button" class="btn btn-secondary">Buscar Paquetes</button>
+                        <button type="submit" class="btn btn-primary">Buscar Vuelos</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
+    </div>
 
-    <aside id="booking-tips" class="sidebar">
-        <h3 class="sidebar-title">Consejos de Reserva</h3>
-        <article class="tip-item">
-            <h4 class="tip-title">Ahorra más del 20%</h4>
-            <p class="tip-description">Al reservar directamente en <strong>luckyair.net</strong>, accedes a descuentos que no están disponibles en agencias físicas.</p>
-        </article>
-        <hr class="divider">
-        <article class="tip-item">
-            <h4 class="tip-title">Check-in Digital</h4>
-            <p class="tip-description">Recuerda que nuestra operación es 100% en línea. Valida tu boleto digitalmente y evita filas en el mostrador.</p>
-        </article>
-    </aside>
-
-    <footer id="main-footer" class="footer">
-        <hr class="divider">
-        <nav class="footer-nav">
-            <a href="informe.html" class="nav-link">Ver Informe Técnico y Validación W3C</a>
-        </nav>
-        <p class="footer-mission">Lucky Air - Conforme a las normativas de aviación civil de China.</p>
-        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
-    </footer>
+    <app-footer root-path=".."></app-footer>
 
 </body>
 </html>

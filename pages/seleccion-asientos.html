@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selección de Asientos - Lucky Air</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/seats.css" />
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
+    <script type="module" src="../js/components/seats.js" defer></script>
+</head>
+<body>
+    <app-navbar root-path=".."></app-navbar>
+
+    <main class="seats-container">
+        <div class="seats-info">
+            <h2>Selecciona tus asientos</h2>
+            <p id="seats-status">Debes seleccionar <span id="seats-needed"></span> asiento(s).</p>
+        </div>
+
+        <div class="plane-fuselage">
+            <div id="seat-map" class="seat-map"></div>
+        </div>
+
+        <div class="seats-actions">
+            <button id="btn-confirm-seats" class="btn btn-primary" disabled>Ir a pagar el vuelo</button>
+        </div>
+    </main>
+    
+    <app-footer root-path=".."></app-footer>
+</body>
+</html>

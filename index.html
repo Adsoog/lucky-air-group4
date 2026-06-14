@@ -3,74 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Lucky Air - Inicio</title>
+    <link rel="stylesheet" href="css/globales.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script src="js/theme.js"></script>
+    <script src="js/components/navbar.js" defer></script>
+    <script src="js/components/footer.js" defer></script>
 </head>
 <body>
 
-    <header id="main-header" class="header">
-        <h1 class="header-title">Lucky Air</h1>
-        <nav id="main-nav" class="nav-menu">
-            <a href="index.html" class="nav-link">Inicio</a> |
-            <a href="pages/reserva.html" class="nav-link">Reserva de Vuelos</a> |
-            <a href="pages/paquetes.html" class="nav-link">Paquetes</a> |
-            <a href="pages/atencion.html" class="nav-link">Atención al Cliente</a> |
-            <a href="pages/trabajo.html" class="nav-link">Portal de Trabajo</a> |
-            <a href="pages/quejas.html" class="nav-link">Quejas</a>
-        </nav>
-    </header>
+    <app-navbar root-path="."></app-navbar>
 
+    <div class="container">
     <main id="home-content" class="main-content">
-        <section id="hero-banner" class="hero">
-            <h2 class="hero-title">Vuela Alto, Paga Poco</h2>
-            <p class="hero-description">
-                Descubre la magia de la provincia de Yunnan con la aerolínea líder en bajo costo.
-                Conectamos sueños con destinos inolvidables.
-            </p>
-            <a href="pages/reserva.html" id="btn-reserva" class="btn btn-primary">¡Reserva tu vuelo ahora!</a>
+        <section id="hero-banner" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('assets/images/lucky-air-image.jpg'); height: 50vh; min-height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 30px; border-radius: 20px;">
+            
+            <div style="display: flex; gap: 20px; width: 100%; max-width: 800px; margin-bottom: 20px; flex-wrap: wrap;">
+                <article class="feature-card" style="flex: 1; margin-bottom: 0; padding: 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; backdrop-filter: blur(8px);">
+                    <h4 style="margin-bottom: 8px; font-weight: 800; color: white;">Eficiencia Total</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.4; color: #f0f0f0;">Nuestra flota de Boeing 737-700 garantiza puntualidad y seguridad en cada trayecto.</p>
+                </article>
+                <article class="feature-card" style="flex: 1; margin-bottom: 0; padding: 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; backdrop-filter: blur(8px);">
+                    <h4 style="margin-bottom: 8px; font-weight: 800; color: white;">Precios Imbatibles</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.4; color: #f0f0f0;">Al eliminar lujos innecesarios, te trasladamos el ahorro directamente a tu bolsillo.</p>
+                </article>
+            </div>
+
+            <a href="pages/reserva.html" id="btn-reserva" class="btn btn-primary" style="font-size: 1.1rem; padding: 12px 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">¡Reserva tu vuelo ahora!</a>
         </section>
 
-        <section id="features" class="features-section">
-            <h3 class="section-title">¿Por qué elegir Lucky Air?</h3>
-            <article class="feature-card">
-                <h4 class="feature-title">Eficiencia Total</h4>
-                <p class="feature-description">Nuestra flota de Boeing 737-700 garantiza puntualidad y seguridad en cada trayecto.</p>
-            </article>
-            <article class="feature-card">
-                <h4 class="feature-title">Precios Imbatibles</h4>
-                <p class="feature-description">Al eliminar lujos innecesarios, te trasladamos el ahorro directamente a tu bolsillo.</p>
-            </article>
-        </section>
-
-        <section id="destinations" class="destinations-section">
-            <h3 class="section-title">Nuestros Destinos Populares</h3>
-            <ul class="destinations-list">
-                <li class="destination-item"><strong class="destination-name">Dali:</strong> Paisajes históricos y cultura ancestral.</li>
-                <li class="destination-item"><strong class="destination-name">Xishuangbanna:</strong> Naturaleza tropical y aventura.</li>
-                <li class="destination-item"><strong class="destination-name">Kunming:</strong> La ciudad de la eterna primavera.</li>
-            </ul>
-        </section>
     </main>
+    </div>
 
-    <aside id="news-sidebar" class="sidebar">
-        <h3 class="sidebar-title">Noticias y Avisos</h3>
-        <article class="news-item">
-            <h4 class="news-title">Nuevas Rutas 2026</h4>
-            <p class="news-description">Próximamente estaremos volando directamente a Shanghai desde Dali.</p>
-        </article>
-        <hr class="divider">
-        <article class="news-item">
-            <h4 class="news-title">Protocolos de Seguridad</h4>
-            <p class="news-description">Revisa las últimas actualizaciones sobre el manejo de equipaje en aeropuertos secundarios.</p>
-        </article>
-    </aside>
-
-    <footer id="main-footer" class="footer">
-        <hr class="divider">
-        <nav class="footer-nav">
-            <a href="pages/informe.html" class="nav-link">Ver Informe Técnico y Validación W3C</a>
-        </nav>
-        <p class="footer-mission">Lucky Air - Conforme a las normativas de aviación civil de China.</p>
-        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
-    </footer>
+    <app-footer root-path="."></app-footer>
 
 </body>
 </html>

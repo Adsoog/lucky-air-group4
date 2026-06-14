@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Lucky Air - Informe Técnico</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
 </head>
 <body>
 
-    <header id="main-header" class="header">
-        <h1 class="header-title">Lucky Air: Informe Técnico del Proyecto</h1>
-        <nav id="main-nav" class="nav-menu">
-            <a href="../index.html" class="nav-link">Inicio</a> |
-            <a href="reserva.html" class="nav-link">Reserva de Vuelos</a> |
-            <a href="paquetes.html" class="nav-link">Paquetes</a> |
-            <a href="atencion.html" class="nav-link">Atención al Cliente</a> |
-            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
-            <a href="quejas.html" class="nav-link">Quejas</a>
-        </nav>
-    </header>
+    <app-navbar root-path=".."></app-navbar>
 
+    <div class="container">
     <main id="report-content" class="main-content">
         <section id="project-summary" class="report-section">
             <h2 class="section-title">Resumen del Trabajo</h2>
@@ -70,15 +69,9 @@
             </article>
         </section>
     </main>
+    </div>
 
-   <footer id="main-footer" class="footer">
-        <hr class="divider">
-        <nav class="footer-nav">
-            <a href="informe.html" class="nav-link">Ver Informe Técnico y Validación W3C</a>
-        </nav>
-        <p class="footer-mission">Lucky Air - Conforme a las normativas de aviación civil de China.</p>
-        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
-    </footer>
+   <app-footer root-path=".."></app-footer>
 
 </body>
 </html>

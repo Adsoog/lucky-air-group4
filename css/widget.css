@@ -1,0 +1,323 @@
+/* Estilos para el Widget de Reservas Moderno */
+
+.modern-booking-widget {
+    max-width: 1000px;
+    margin: 40px auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    background: transparent;
+    overflow: hidden; /* Para que las pestañas no se salgan del borde si hubiera */
+}
+
+/* Pestañas Superiores */
+.widget-tabs {
+    display: flex;
+    background-color: #1a1a3a; /* Azul muy oscuro estilo aerolínea */
+    overflow-x: auto;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Ocultar barra de scroll en pestañas */
+.widget-tabs::-webkit-scrollbar {
+    display: none;
+}
+.widget-tabs {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.widget-tab {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s, color 0.3s;
+}
+
+.widget-tab:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.widget-tab.active {
+    background-color: var(--card-bg);
+    color: var(--accent-red);
+    font-weight: 700;
+    border-bottom: 3px solid var(--accent-red);
+}
+
+/* Cuerpo del Widget */
+.widget-body {
+    background-color: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+    border: 1px solid var(--card-border);
+    border-top: none;
+}
+
+/* Cabecera del Widget (Título y Píldoras) */
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.widget-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.widget-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pill {
+    background: transparent;
+    border: 1px solid var(--input-border);
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.pill:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.pill.active {
+    background: #e8f0fe; /* Fondo azul claro activo */
+    color: #1a73e8; /* Texto azul activo */
+    border-color: #1a73e8;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .pill.active {
+    background: rgba(26, 115, 232, 0.2);
+    color: #8ab4f8;
+    border-color: #8ab4f8;
+}
+
+.check {
+    font-size: 0.8rem;
+}
+
+.dropdown-btn {
+    background: transparent;
+    border: 1px solid var(--accent-red);
+    color: var(--accent-red);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-btn:hover {
+    background: var(--accent-red);
+    color: white;
+}
+
+/* Inputs de Ubicación Unidos */
+.widget-locations {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    position: relative;
+    background: var(--input-bg);
+}
+
+.location-input {
+    flex: 1;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-input.left {
+    border-right: 1px solid var(--input-border);
+    border-radius: 12px 0 0 12px;
+}
+
+.location-input.right {
+    border-radius: 0 12px 12px 0;
+}
+
+.location-input label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2px;
+}
+
+.location-input input {
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    outline: none;
+    width: 100%;
+}
+
+.location-input input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.swap-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-red);
+    background: var(--card-bg);
+    color: var(--accent-red);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    z-index: 2;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.swap-btn:hover {
+    background: var(--accent-red);
+    color: white;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.widget-footer-actions {
+    margin-top: 30px;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .widget-locations {
+        flex-direction: column;
+    }
+    .location-input.left {
+        border-right: none;
+        border-bottom: 1px solid var(--input-border);
+        border-radius: 12px 12px 0 0;
+    }
+    .location-input.right {
+        border-radius: 0 0 12px 12px;
+    }
+    .swap-btn {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+    .swap-btn:hover {
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+}
+
+/* Autocomplete (Añadido desde reserva.html) */
+.autocomplete-container {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg, #ffffff);
+    border: 1px solid var(--input-border, #ccc);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--input-border, #eee);
+    font-size: 0.95rem;
+    color: var(--text-color, #333);
+}
+
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-item:hover {
+    background-color: rgba(211, 47, 47, 0.1);
+}
+
+.widget-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.dates-group { flex: 2; min-width: 250px; }
+.passenger-group { flex: 1.5; min-width: 200px; }
+.promo-group { flex: 1; min-width: 150px; }
+
+.location-input.single {
+    border-radius: 12px;
+}
+
+.dropdown-invisible {
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23d32f2f" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: center;
+    padding-right: 20px;
+}
+
+.dropdown-invisible option {
+    color: initial;
+    background: initial;
+}
+
+.widget-footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}

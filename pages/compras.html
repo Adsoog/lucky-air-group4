@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Vuelos - Lucky Air</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/compras.css" />
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
+    <script src="../js/components/compras.js" defer></script>
+</head>
+<body>
+    <app-navbar root-path=".."></app-navbar>
+
+    <main class="compras-container">
+        <h2 class="compras-title">Mis Vuelos y Reservas</h2>
+
+        <div id="compras-list" class="compras-list">
+            <!-- filled -->
+        </div>
+
+        <div id="no-compras" class="no-compras" style="display: none;">
+            <div class="empty-icon">✈️</div>
+            <h3>Aún no tienes vuelos reservados</h3>
+            <p>Explora nuestros destinos y planifica tu próxima aventura con nosotros.</p>
+            <a href="reserva.html" class="btn btn-primary">Ir a Reservar</a>
+        </div>
+    </main>
+
+    <app-footer root-path=".."></app-footer>
+</body>
+</html>

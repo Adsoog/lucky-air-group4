@@ -3,43 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Lucky Air - Centro de Ayuda Autogestionado</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
 </head>
 <body>
 
-    <header id="main-header" class="header">
-        <h1 class="header-title">Lucky Air: Centro de Ayuda</h1>
-        <nav id="main-nav" class="nav-menu">
-            <a href="../index.html" class="nav-link">Inicio</a> |
-            <a href="reserva.html" class="nav-link">Reserva de Vuelos</a> |
-            <a href="paquetes.html" class="nav-link">Paquetes</a> |
-            <a href="atencion.html" class="nav-link active">Atención al Cliente</a> |
-            <a href="trabajo.html" class="nav-link">Portal de Trabajo</a> |
-            <a href="quejas.html" class="nav-link">Quejas</a>
-        </nav>
-    </header>
+    <app-navbar root-path=".."></app-navbar>
 
+    <div class="container">
     <main id="support-content" class="main-content">
         <section id="help-search" class="search-section">
             <h2 class="section-title">¿Cómo podemos ayudarte hoy?</h2>
             <form action="#" method="get" class="search-form">
                 <label for="search-input">Busca un tema (ej. Equipaje, Check-in):</label>
                 <input type="search" id="search-input" name="q" placeholder="Escribe tu duda aquí..." class="form-input" required>
-                <button type="submit" class="btn btn-primary">Buscar Solución</button>
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Buscar Solución</button>
             </form>
-        </section>
-
-        <section id="chatbot-interface" class="bot-section">
-            <h3 class="section-title">LuckyBot: Asistente Virtual 24/7</h3>
-            <article class="bot-card">
-                <p class="bot-message"><strong>LuckyBot dice:</strong> ¡Hola! Soy tu agente automatizado integrado vía WhatsApp. Puedo ayudarte a validar tu boleto o consultar el estado de tu vuelo en tiempo real y sin esperas.</p>
-
-                <p>Selecciona una opción rápida:</p>
-                <nav id="bot-options" class="bot-menu">
-                    <button type="button" class="btn btn-secondary">Validar Boleto</button>
-                    <button type="button" class="btn btn-secondary">Estado de Vuelo</button>
-                    <button type="button" class="btn btn-secondary">Cambiar Mi Asiento</button>
-                </nav>
-            </article>
         </section>
 
         <section id="faq-section" class="faq-section">
@@ -60,28 +45,49 @@
                 </dl>
             </details>
         </section>
+
+        <section id="complaint-form" class="form-section">
+            <h3 class="section-title">Formulario de Contacto</h3>
+            <p class="section-description">Si no encontraste la solución, envíanos un mensaje y te responderemos pronto.</p>
+            <form action="#" method="post" enctype="multipart/form-data" class="contact-form">
+                <div class="form-group">
+                    <label for="full-name">Nombre Completo:</label>
+                    <input type="text" id="full-name" name="user_name" required class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-email">Correo Electrónico:</label>
+                    <input type="email" id="user-email" name="user_email" placeholder="ejemplo@correo.com" required class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="ticket-number">Número de Reserva:</label>
+                    <input type="text" id="ticket-number" name="ticket_id" maxlength="10" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="issue-type">Motivo de tu mensaje:</label>
+                    <select id="issue-type" name="issue_category" class="form-select">
+                        <option value="general">Consulta General</option>
+                        <option value="delay">Problema con vuelo / Demora</option>
+                        <option value="luggage">Problema con equipaje</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje / Detalle:</label>
+                    <textarea id="message" name="user_message" rows="4" placeholder="Describe los hechos de forma detallada..." class="form-textarea" required></textarea>
+                </div>
+
+                <div class="form-actions" style="margin-top: 15px; text-align: right;">
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </div>
+            </form>
+        </section>
     </main>
+    </div>
 
-    <aside id="self-service-sidebar" class="sidebar">
-        <h3 class="sidebar-title">Zona de Autoservicio</h3>
-        <p class="sidebar-description">Ahorra tiempo usando nuestros quioscos digitales en el aeropuerto.</p>
-        <figure class="sidebar-image-container">
-            <img src="../assets/quiosco.jpg" alt="Pasajero usando un quiosco de check-in digital en el aeropuerto" width="400" height="300" class="sidebar-image">
-            <figcaption>Nuestros quioscos reducen el tiempo de espera en un 50%.</figcaption>
-        </figure>
-        <hr class="divider">
-        <h4 class="sidebar-subtitle">Soporte Técnico</h4>
-        <p class="sidebar-description">Si tienes problemas con el pago en línea, verifica tu tarjeta de crédito aquí.</p>
-    </aside>
-
-    <footer id="main-footer" class="footer">
-        <hr class="divider">
-        <nav class="footer-nav">
-            <a href="informe.html" class="nav-link">Ver Informe Técnico y Validación W3C</a>
-        </nav>
-        <p class="footer-mission">Lucky Air - Conforme a las normativas de aviación civil de China.</p>
-        <p class="footer-copy">&copy; 2026 Adso Martin Obregon Gutierrez</p>
-    </footer>
+    <app-footer root-path=".."></app-footer>
 
 </body>
 </html>

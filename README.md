@@ -1,54 +1,67 @@
 # ✈️ Lucky Air - Prototipo Frontend (Grupo 4)
 
-Proyecto académico basado en la resolución del caso **"E-commerce at Yunnan Lucky Air"**. Este repositorio contiene la primera fase del desarrollo del prototipo web de la aerolínea.
+Proyecto académico basado en la resolución del caso **"E-commerce at Yunnan Lucky Air"**. Este repositorio contiene el desarrollo del prototipo web funcional de la aerolínea, abarcando desde la maquetación estructural hasta la simulación completa del flujo de reservas.
 
 ## 🎯 Objetivo del Proyecto
 
-Desarrollar la arquitectura estructural y semántica de la plataforma web de Lucky Air utilizando **estrictamente HTML5 puro**. El objetivo principal es demostrar el dominio de la maquetación semántica y la accesibilidad web antes de la integración de capas de diseño (CSS) o interactividad (JavaScript).
+Desarrollar una plataforma web escalable, responsiva e interactiva para Lucky Air. El proyecto evolucionó de una base estrictamente semántica (HTML5 puro) hacia una aplicación dinámica en el lado del cliente, demostrando el dominio de **CSS3 moderno** (efectos premium como glassmorphism) y **Vanilla JavaScript** para la gestión del estado y la lógica de negocio sin depender de frameworks externos.
 
 ## 🏗️ Arquitectura y Estructura del Proyecto
 
-El proyecto ha sido diseñado con una arquitectura escalable, separando los recursos y las vistas lógicamente:
+El proyecto ha sido rediseñado con una arquitectura modular, separando los recursos, estilos y la lógica de componentes:
 
-    /lucky-air-group4
-     ├── 📁 assets/
-     │    ├── banner-paquetes.png
-     │    ├── banner-quejas.png
-     │    ├── banner-reserva.jpg
-     │    ├── banner-trabajo.jpg
-     │    ├── quiosco.jpg
-     │    ├── reportesucceswc3.png
-     │    └── reportwc3.png
-     ├── 📁 pages/
-     │    ├── atencion.html
-     │    ├── informe.html
-     │    ├── paquetes.html
-     │    ├── quejas.html
-     │    ├── reserva.html
-     │    └── trabajo.html
-     ├── 📄 index.html
-     └── 📄 README.md
+```text
+/lucky-air-group4
+ ├── 📁 assets/
+ │    ├── banner-reserva.jpg
+ │    └── ... (imágenes y recursos)
+ ├── 📁 css/
+ │    ├── globales.css
+ │    ├── header.css
+ │    ├── footer.css
+ │    ├── widget.css
+ │    ├── flights.css
+ │    └── seats.css
+ ├── 📁 js/
+ │    ├── 📁 components/
+ │    │    ├── navbar.js
+ │    │    ├── footer.js
+ │    │    ├── booking.js
+ │    │    ├── flight-list.js
+ │    │    └── seats.js
+ │    └── 📁 utils/
+ │         └── destinations.js
+ ├── 📁 pages/
+ │    ├── reserva.html
+ │    ├── seleccion-vuelos.html
+ │    ├── seleccion-asientos.html
+ │    ├── compras.html
+ │    ├── informe.html
+ │    └── ...
+ ├── 📄 index.html
+ └── 📄 README.md
+```
 
-## 🛠️ Tecnologías y Estándares Utilizados
+## 🛠️ Tecnologías, Estándares y Funcionalidades
 
-* **HTML5 (Strict):** Uso intensivo de etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<details>`).
-* **Formularios Avanzados:** Implementación de `<fieldset>`, `<datalist>`, `<optgroup>` y validaciones nativas de HTML.
-* **Nu Html Checker (W3C):** Todo el código ha sido sometido a auditoría mediante el validador oficial de la W3C, logrando **0 errores y 0 advertencias**.
+* **HTML5 Semántico y Web Components:** Uso de etiquetas estructurales y creación de etiquetas personalizadas (`<app-navbar>`, `<app-footer>`) para reutilizar código en múltiples páginas.
+* **CSS3 Avanzado (Modern UI):** Implementación de diseño responsivo (Flexbox/Grid), variables CSS globales (`:root`), y efectos visuales de alta fidelidad como desenfoque de fondo (`backdrop-filter`) y tarjetas flotantes.
+* **Vanilla JavaScript (ES6+):** Sistema de módulos (`import`/`export`), manipulación dinámica del DOM, validaciones de formularios y control de eventos.
+* **Persistencia de Datos (JSON & LocalStorage):** Simulación de una base de datos y gestión de estado mediante `localStorage`. El sistema serializa objetos de reserva en JSON, permitiendo que la información (origen, destino, pasajeros, precios) viaje consistentemente a lo largo de las distintas páginas del embudo de conversión.
 
-## 📋 Reglas de la Fase Actual
+## 🚀 Flujo de Usuario Implementado (Booking Engine)
 
-* ✅ **Solo HTML5 puro.**
-* ✅ Clases CSS preparadas y estructuradas (`class="..."`) para la siguiente fase, pero sin archivos `.css` vinculados.
-* ✅ Rutas relativas correctas entre directorios.
-* ❌ Cero uso de frameworks (React, Angular, etc.).
+* **Búsqueda (Widget):** Autocompletado de aeropuertos, intercambio de origen/destino (Swap) y captura de fechas/pasajeros.
+* **Generación Dinámica de Vuelos:** Renderizado de tarjetas de vuelo (Ida y Vuelta) con precios, horas y etiquetas promocionales generadas algorítmicamente.
+* **Selección de Asientos:** Mapa interactivo de la cabina (Grid) con validación estricta basada en el número de pasajeros y simulación de asientos previamente ocupados.
+* **Checkout:** Resumen de compra, cálculo automático de base e impuestos (18%), simulación de pasarela de pago con delay asíncrono, y generación de código de reserva único.
 
-## 📊 Informe Técnico
+## 📋 Reglas del Desarrollo
 
-Se ha incluido una página específica (`pages/informe.html`) dentro del proyecto que detalla las decisiones arquitectónicas y muestra la evidencia fotográfica de la validación exitosa ante la W3C.
+* ✅ **Cero uso de frameworks CSS/JS:** Todo el diseño y la interactividad fueron construidos desde cero sin Bootstrap, Tailwind, React, ni Angular. Todo es código nativo.
+* ✅ **Validaciones estrictas de la W3C:** (0 errores, 0 advertencias) en la fase estructural.
+* ✅ **Separación de responsabilidades:** HTML (Estructura), CSS (Presentación) y JS (Comportamiento) en archivos independientes.
 
 ## 👥 Integrantes - Grupo 4
 
 * Adso Martin Obregon Gutierrez
-
----
-*Nota: Este proyecto es con fines educativos para el curso de Fundamentos de Frontend. Las capas de CSS y JS serán integradas en fases posteriores.*

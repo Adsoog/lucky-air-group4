@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selección de Vuelos - Lucky Air</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/flights.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
+    <script type="module" src="../js/components/flight-list.js" defer></script>
+</head>
+<body>
+
+    <app-navbar root-path=".."></app-navbar>
+
+    <div class="summary-bar">
+        <div id="search-summary" class="summary-content"></div>
+        <button class="btn-modify" onclick="window.history.back()">Modificar búsqueda ⌵</button>
+    </div>
+
+    <main class="flights-container">
+        <h2 class="flights-title">Elige un vuelo de ida</h2>
+        
+        <div class="promo-banner">
+            📅 Escogiste la fecha con precios más convenientes ¡Compra ahora!
+        </div>
+
+        <div id="flight-list"></div>
+    </main>
+
+    <app-footer root-path=".."></app-footer>
+
+</body>
+</html>

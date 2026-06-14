@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen de Reserva - Lucky Air</title>
+    <link rel="stylesheet" href="../css/globales.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <script src="../js/theme.js"></script>
+    <script src="../js/components/navbar.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
+    <script type="module" src="../js/components/checkout.js" defer></script>
+</head>
+<body>
+    <app-navbar root-path=".."></app-navbar>
+
+    <main class="checkout-container">
+        <h2 class="checkout-title">Resumen de tu Compra</h2>
+
+        <div class="checkout-layout">
+            <section class="checkout-details">
+                <h3>Detalles del Vuelo</h3>
+                <div id="flight-summary-box" class="summary-box">
+                    <!-- filled  -->
+                </div>
+
+                <h3>Pasajeros y Asientos</h3>
+                <div id="passengers-summary-box" class="summary-box">
+                    <!-- filled  -->
+                </div>
+            </section>
+
+            <aside class="checkout-price">
+                <h3>Desglose de Pago</h3>
+                <div class="price-row">
+                    <span>Tarifa Base (x<span id="qty-passengers">1</span>)</span>
+                    <span id="base-price">$0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Impuestos y tasas</span>
+                    <span id="taxes">$0.00</span>
+                </div>
+                <hr style="border: 0; border-top: 1px solid var(--input-border); margin: 15px 0;">
+                <div class="price-row total-row">
+                    <span>Total a Pagar</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+
+                <button id="btn-pay" class="btn btn-primary btn-pay">Procesar Pago Seguro 🔒</button>
+            </aside>
+        </div>
+    </main>
+
+    <app-footer root-path=".."></app-footer>
+</body>
+</html>

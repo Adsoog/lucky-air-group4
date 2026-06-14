@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

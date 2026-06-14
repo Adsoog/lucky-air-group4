@@ -1,0 +1,186 @@
+.compras-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 50vh;
+}
+
+.compras-title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.no-compras {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.no-compras h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.no-compras p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.boarding-pass {
+    display: flex;
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    border: 1px solid var(--card-border);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.boarding-pass:hover {
+    transform: translateY(-2px);
+}
+
+.pass-left {
+    flex: 3;
+    padding: 25px;
+    border-right: 2px dashed var(--input-border);
+    position: relative;
+}
+
+.pass-left::after, .pass-left::before {
+    content: '';
+    position: absolute;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-color);
+    border-radius: 50%;
+}
+
+.pass-left::before {
+    top: -10px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.pass-left::after {
+    bottom: -10px;
+    border-top: 1px solid var(--card-border);
+}
+
+.pass-right {
+    flex: 1;
+    background: rgba(211, 47, 47, 0.05);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+[data-theme="dark"] .pass-right {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.city {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.plane-icon {
+    font-size: 1.5rem;
+    color: var(--accent-red);
+}
+
+.pass-details {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.detail-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+.qr-placeholder {
+    width: 80px;
+    height: 80px;
+    background: repeating-linear-gradient(
+      45deg,
+      #ccc,
+      #ccc 5px,
+      #fff 5px,
+      #fff 10px
+    );
+    margin-bottom: 15px;
+    border: 4px solid white;
+}
+
+[data-theme="dark"] .qr-placeholder {
+    background: repeating-linear-gradient(
+      45deg,
+      #555,
+      #555 5px,
+      #333 5px,
+      #333 10px
+    );
+    border-color: #2a2a2a;
+}
+
+.booking-code {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-red);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .boarding-pass {
+        flex-direction: column;
+    }
+    .pass-left {
+        border-right: none;
+        border-bottom: 2px dashed var(--input-border);
+    }
+    .pass-left::before, .pass-left::after {
+        display: none;
+    }
+}
